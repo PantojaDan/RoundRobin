@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+
+
+#frame-main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background-color: #02111b;
+}
+
+
+
+
+
+#input-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    padding: 1rem;
+}
+#visualization{
+    width: 60%;
+    height: 100%;
+    padding: 1rem;
+}
+
+
+
+
+#error{
+    width: 70%;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    background-color: #ce0746b6;
+}
+#input-data > div{
+    background-color: #192730;
+    width: 70%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border-bottom: 3px solid transparent;
+    transition: all ease-in 0.3s;
+}
+#input-data > div:hover{
+    transform: scale(1.02);
+    border-bottom: 3px solid #5570FA;
+}
+#input-data > div > h1{
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+#input-data > div > form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#input-data > div > form > input{
+    outline: none;
+    border: none;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #5570fa69;
+    border-radius: 0.4rem;
+    color: #5570fa75;
+}
+#input-data > div > form > button{
+    width: 100px;
+    margin: auto;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    background-color: #5570FA;
+    color: white;
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+#input-data > div > form > button:hover{
+    background-color: #5570fa9d;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+#simulate{
+    background: #3f37c9;
+    border:none;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+.extended{
+    width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#visualization{
+    display: flex;
+    flex-direction: column;
+}
+#tasks{
+    width: 100%;
+    height: 20%;
+}
+#icon{
+    width: 100%;
+    height: 60%;
+}
+#finished{
+    width: 100%;
+    height: 20%;
+}
+
+#icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#time-set{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+@keyframes changeColor {
+    0%{
+        color: #34a0a4;
+    }
+    10%{
+        color: #4895ef;
+    }
+    20%{
+        color: #4cc9f0;
+    }
+    40%{
+        color: #184e77;
+    }
+    50%{
+        color: #1e6091;
+    }
+    60%{
+        color: #778da9;
+    }
+    80%{
+        color: #3f37c9;
+    }
+    100%{
+        color: #4361ee;
+    }
+}
+#icon i{
+    font-size: 10rem;
+    animation-name: changeColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+#tasks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+.task-item{
+    background-color: #192730;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.4rem;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.clock{
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    color: #4361ee;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode:backwards;
+    animation-play-state: running;
+}
+.task-item > p{
+    color: rgb(163, 163, 163);
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.task-item > b{
+    font-size: 0.9rem;
+    color: #3f37c9;
+}
+.task-item > b > i{
+    color: #4361ee;
+    margin-left: 0.8rem;
+}
+
+
+#finished{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.done{
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    color: #0a863a;
+}
